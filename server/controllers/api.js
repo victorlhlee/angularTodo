@@ -38,7 +38,7 @@ router.delete('/:id', function (req, res) {
 
 //complete todos
 router.put('/:id/complete', function (req, res){
-  Todo.update(req.params.id,
+  Todo.update({_id : req.params.id},
    {
     $set : {
       completed : true
@@ -52,7 +52,7 @@ router.put('/:id/complete', function (req, res){
 
 //incomplete todos
 router.put('/:id/incomplete', function (req, res){
-  Todo.update(req.params.id,
+  Todo.update({_id : req.params.id},
   {
     $set : {
       completed : false

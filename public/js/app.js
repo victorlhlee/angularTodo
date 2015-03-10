@@ -14,8 +14,13 @@ angular
         title : new_title,
         completed : false
       });
-      $scope.new_todo = "";
+      $scope.new_todo = ""; //clear the input
+
+      TodoService.create({ title : new_title });
     };
+
+    //save to db
+   
 
     $scope.enter_saves = function($event){
       if( $event.keyCode == 13){

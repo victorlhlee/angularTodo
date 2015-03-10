@@ -8,5 +8,8 @@ angular
       return $http.get('/api'); // returns promise
     };
 
+    this.create = function ( todo ) {
+      return $http.post( '/api', todo ); // returns promise
+    };
   }]);
 
