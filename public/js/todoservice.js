@@ -23,6 +23,11 @@ angular
     this.incomplete = function (todo_id){
       return $http.put('/api/'+todo_id+'/incomplete');
     };
+
+    //destroys a todo
+    this.delete = function (todo_id){
+      return $http.delete('/api/'+todo_id); //returns promise
+    };
     
   }]);
 
