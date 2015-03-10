@@ -20,7 +20,7 @@
       
       <ul>
         <li ng-repeat="todo in todos | filter:searchQuery">
-          <input type="checkbox" ng-checked="todo.completed">
+          <input type="checkbox" ng-checked="todo.completed" ng-click="check_changed($event, todo._id)">
           <span class="title">{{ todo.title }}</span>
     
         </li>
